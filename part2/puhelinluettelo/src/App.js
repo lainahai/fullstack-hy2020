@@ -49,6 +49,7 @@ const App = () => {
           setNewName('')
           setNewNumber('')
         })
+        .catch(error => showError(JSON.stringify(error.response.data))) 
       }
     } else {
       PersonService.create(newPerson)    
@@ -57,6 +58,10 @@ const App = () => {
           setNewName('')
           setNewNumber('')
           showSuccess(`Added ${response.name}`)
+      })
+      .catch((error) => {
+        console.log(error.response.data)
+        showError(JSON.stringify(error.response.data))
       })
       
     }
@@ -109,8 +114,6 @@ const App = () => {
   )
 
 }
-
-
 
 
 export default App

@@ -1,7 +1,6 @@
 import React from 'react'
 
 const PersonList = ( { persons, nameFilter, handleDelete } ) => {
-
   const personList = persons.filter(person => person.name.toLowerCase().includes(nameFilter)).map( 
     person => <Person key={person.id} person={person} handleDelete={handleDelete}/> 
   )

@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/blogs/
+content-type: application/json
+
+{
+  "title":"Mullan Alta",
+  "author": "Ilari Aalto",
+  "url": "https://mullanalta.blogspot.com/",
+  "likes": 9000
+}
